@@ -1,0 +1,29 @@
+\documentclass{article}
+
+\usepackage[landscape]{geometry}
+
+\usepackage{graphicx}
+\graphicspath{{./photos.book}}
+
+\usepackage[UTF8]{ctex}
+\setmainfont{Times New Roman}
+\setCJKmainfont{Source Han Serif SC}
+
+\title{相册}
+\author{周彦百}
+
+\makeatletter
+\let\runtitle\@title
+\let\runauthor\@author
+\let\rundate\@date
+\makeatother
+
+
+\begin{document}
+\include{./part/cover.tex}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{./part/pic-import.tex}
+
+
+\end{document}
