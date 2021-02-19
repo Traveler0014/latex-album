@@ -4,7 +4,9 @@ str1 = r"""
 \begin{figure}
     \begin{center}
         \includegraphics[height=0.75\textheight]{p-1_%d.jpg}
-        \caption{%s}
+        \begin{shaded}
+            \caption{%s}
+        \end{shaded}
     \end{center}
 \end{figure}
 
@@ -14,7 +16,7 @@ str1 = r"""
 test = open("./part/pic-import.tex",mode="w",encoding="utf-8")
 with open("./photos.book/album.csv",mode="r",encoding="utf-8") as f:
     reader = list(csv.reader(f))
-    for i in range(102):
+    for i in range(106):
         test.write(str1%(i+1,'-'.join(reader[i+1])))
 
 
